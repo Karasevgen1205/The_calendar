@@ -23,3 +23,9 @@ class Holiday(models.Model):
 class User(AbstractUser):
     country = models.ForeignKey(Country, on_delete=models.CASCADE, null=True, blank=True)
 
+
+class Event(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    holiday = models.ForeignKey(Holiday, on_delete=models.CASCADE)
+    timedelta = models.DurationField()
+    need_remind = models.BooleanField()
