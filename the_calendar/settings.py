@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'app_calendar',
+    'app_calendar',
+    'rest_framework',
 ]
 
 ROOT_URLCONF = 'the_calendar.urls'
