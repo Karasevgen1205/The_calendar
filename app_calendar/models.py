@@ -1,4 +1,5 @@
-import calendar
+from calendar import calendar
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -29,3 +30,4 @@ class Event(models.Model):
     holiday = models.ForeignKey(Holiday, on_delete=models.CASCADE)
     timedelta = models.DurationField()
     need_remind = models.BooleanField()
+
